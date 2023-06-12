@@ -10,75 +10,61 @@
       <h1>AFILIACION A RCR TELEPHONY</h1>
     </header>
     <main>
-        <br>
-        <br>
-        <h2>Elige tu Plan Telefónico</h2>
-            <figure>
-              <img
-                src="../images/1.png"
-                class="img"
-                width="500"      
-            </figure>              
-              |<img
-                  src="../images/2.png"
-                  class="img"
-                  width="500" 
-            </figure>
-              <img
-                src="../images/3.png"
-                class="img"
-                width="500"   
-            </figure>          
-            <div class="radio">
-              <label>
-                <input
-                  type="radio"
-                  value="$10"
-                  name="radio1"
-                  />PLAN 5 GB
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="$15"
-                  name="radio1"  
-                />PLAN 10 GB
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="$20"
-                  name="radio1"                  
-                />PLAN 20 GB
-              </label>
-            </div>
+      <br />
+      <br />
+      <h2>Elige tu Plan Telefónico</h2>
+      <figure>
+        <img src="../images/1.png" class="img" width="500" />
+
+        <img src="../images/2.png" class="img" width="500" />
+
+        <img src="../images/3.png" class="img" width="500" />
+      </figure>
+      <div class="radio">
+        <label>
+          <input type="radio" value="$10" name="radio1" />PLAN 5 GB
+        </label>
+        <label>
+          <input type="radio" value="$15" name="radio1" />PLAN 10 GB
+        </label>
+        <label>
+          <input type="radio" value="$20" name="radio1" />PLAN 20 GB
+        </label>
+      </div>
+      <section id="Card">
+        <div class="card__description">
+          <h2>Introduce el número de tu Tarjeta Débito/Crédito</h2>
+          <div class="button">
+            <label>
+              <input
+                type="text"
+                id="tarjeta"
+                name="tarjeta"
+                placeholder="Ingrese su número de tarjeta"
+              />
+              <button
+                type="button"
+                id="validar"
+                addEventListener="validarTarjeta()"
+              >
+                Validar
+              </button>
+            </label>
           </div>
-        </section>
-        <section id="Card">
-          <div class="card__description">
-            <h2>Introduce el número de tu Tarjeta Débito/Crédito</h2>
-            <div class="radio">
-              <label>
-                <input type="text" id="tarjeta" name="tarjeta" placeholder="Ingrese su número de tarjeta">
-                <button type="button" onclick="validarTarjeta()">Validar</button>
-              </label>
-            </div>
-          </div>
-        </section> 
-        <section
-        <section id="Datos">
-          <div class="card__description">
-            <h2>Introduce tu Nombre y Apellidos</h2>
-            <br>
-            <h3>Nombres</h3>
-            <input type="text" id="Nombre" name="Nombres"
-            <br>
-            <h3>Apellidos</h3>
-            <input type="text" id="Apellido" name="Apellidos"
-          </div>  
-        </section>    
+        </div>
+      </section>
+      <section id="Datos">
+        <div class="card__description">
+          <h2>Introduce tu Nombre y Apellidos</h2>
+          <br />
+          <h3>Nombres</h3>
+          <input type="text" id="Nombre" name="Nombres" />
+          <br />
+          <h3>Apellidos</h3>
+          <input type="text" id="Apellido" name="Apellidos" />
+        </div>
+      </section>
     </main>
-    <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
