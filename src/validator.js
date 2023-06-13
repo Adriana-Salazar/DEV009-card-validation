@@ -3,20 +3,26 @@ const validator = {
   isValid: function (creditCardNumber) {
     const digits = creditCardNumber.split("");
     const reversedDigits = digits.reverse();
-
-    //..Aplicar el Algoritmo de Luhn
-    let sum = 0;
-    for (let i = 0; i < reversedDigits.length; i++) {
-      let digit = parseInt(reversedDigits[i], 10);
-      if (i % 2 !== 0) {
-        digit *= 2;
-        if (digit > 9) {
-          digit -= 9;
+    if (creditCardNumber === "") {
+      document.querySelector(
+        ".result"
+      ).innerHTML = `Introduce número de tarjeta`;
+      return;
+    } else {
+      //..Aplicar el Algoritmo de Luhn
+      let sum = 0;
+      for (let i = 0; i < reversedDigits.length; i++) {
+        let digit = parseInt(reversedDigits[i], 10);
+        if (i % 2 !== 0) {
+          digit *= 2;
+          if (digit > 9) {
+            digit -= 9;
+          }
         }
+        sum += digit;
       }
-      sum += digit;
+      return sum % 10 === 0;
     }
-    return sum % 10 === 0;
   },
   // Verificar si la longitud de la tarjeta es menor o igual a 4
   maskify: function (creditCardNumber) {

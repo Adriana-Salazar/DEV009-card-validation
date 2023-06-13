@@ -1,27 +1,25 @@
-import validator from './validator.js';
-// eslint-disable-next-line no-console
-console.log(validator);
+import validator from "./validator.js";
 
-const input = document.getElementById("tarjeta")
+const camp = document.getElementById("tarjeta");
+//camp.addEventListener("click", function () {
+// const spaces= "";
+//if(spaces === "") {
+//document.querySelector(".empty").innerHTML = `Introduce número de tarjeta`
+//}
+//})
 
-input.addEventListener("input", () => {
-  const inputValue = input.value;
-  // eslint-disable-next-line no-console
-  console.log(inputValue);
-})
-
-function validarTarjeta() {
-  const creditCardNumber = input.value;
+const btn = document.getElementById("validar");
+btn.addEventListener("click", function () {
+  const creditCardNumber = camp.value;
   const isValid = validator.isValid(creditCardNumber);
   const maskedNumber = validator.maskify(creditCardNumber);
-  // eslint-disable-next-line no-console
-  console.log(`El número de tarjeta ${maskedNumber} es válido: ${isValid}`);
-  
-}
-
-const validateButton = document.getElementById('validar');
-validateButton.addEventListener('click', validarTarjeta);
-export default {};
-// eslint-disable-next-line no-console
-console.log(validator);
-
+  if (isValid === true) {
+    document.querySelector(
+      ".result"
+    ).innerHTML = `El número de tarjeta ${maskedNumber} es Válido`;
+  } else if (isValid === false) {
+    document.querySelector(
+      ".result"
+    ).innerHTML = `El número de tarjeta ${maskedNumber} es Invalido`;
+  }
+});
