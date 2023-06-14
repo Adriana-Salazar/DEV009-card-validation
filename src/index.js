@@ -1,4 +1,5 @@
 import validator from "./validator.js";
+
 const camp = document.getElementById("tarjeta");
 const btn = document.getElementById("validar");
 btn.addEventListener("click", function () {
@@ -18,8 +19,8 @@ btn.addEventListener("click", function () {
 
 document.getElementById("Datos").addEventListener("click", validarDatos);
 function validarDatos() {
-  let nombres = document.getElementById("name").value;
-  let apellidos = document.getElementById("last_name").value;
+  const nombres = document.getElementById("name").value;
+  const apellidos = document.getElementById("last_name").value;
   if (nombres === "" || apellidos === "") {
     alert("Por favor, complete los campos de nombres y apellidos.");
   } else {
@@ -27,3 +28,4 @@ function validarDatos() {
     alert("Formulario enviado correctamente.");
   }
 }
+console.log(validator);
