@@ -1,52 +1,59 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  
 }
-
+body {
+  margin-bottom: 100px;
+}
 header {
-    text-align: center;  
-    color: black;
-    background-color: #dceeff;
-    border: 1px solid black;
-    padding: 5px;
-  }
-  h2 {
-    text-align: center;  
-    color: black;
-    padding: 0px;
-    margin: 25px 0;
-  }
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 60px;
-    padding: 20px;
-    background-color:#dceeff;
-    
-  }
-  section {
-    height: 250px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: space-around;
-    padding: 10px;
-    margin-top: 10px;
-    background-color:#5de9db;
-  }  
-  .radio {
-      display: flex;
-      justify-content: space-around;    
-      margin-top: 10px;
-  }    
-  img {
-    padding: 50px;        
-    justify-content: flex-end;
-    padding: 20px;
-    margin: 0 60px;    
-  }  
- 
-  
-   
-  
+  text-align: center;
+  color: black;
+  border: 2px solid #416e97;
+  padding: 5px;
+}
+h2 {
+  text-align: center;
+  color: black;
+  padding: 0px;
+  margin: 5px 0;
+}
+section {
+  margin: 0 auto;
+  width: 750px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  margin-top: 10px;
+  background-color: #52cbbe;
+  border: 2px solid #416e97;
+  border-radius: 20px;
+}
+.radio {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+img {
+  padding: 15px;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 0 110px;
+}
+form {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  width: 750px;
+  /* Esquema del formulario */
+  font-size: 17px;
+  padding: 10px;
+  border: 2px solid #416e97;
+  border-radius: 20px;
+  background-color: #52cbbe;
+}
+.pay {
+  margin: 25px;
+  border: 2px solid #416e97;
+  font-size: 15px;
+  padding: 10px;
+}
